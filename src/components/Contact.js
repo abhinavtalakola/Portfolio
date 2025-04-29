@@ -78,7 +78,7 @@ const Contact = () => {
             <div className="contact-methods">
               <div className="contact-method">
                 <FaEnvelope className="contact-icon" />
-                <span>abhinav@example.com</span>
+                <span>abhinavreddy27114@gmail.com</span>
               </div>
               <div className="contact-method">
                 <a href="https://github.com/abhinavtalakola" target="_blank" rel="noopener noreferrer">

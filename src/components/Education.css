@@ -1,0 +1,171 @@
+/* Education Section - Transparent Background with Gradient Effects */
+.education-full-width {
+  width: 100%;
+  position: relative;
+  padding: 5rem 2rem;
+  background-color: transparent;
+  overflow: hidden;
+  margin-top: -1px;
+  z-index: 1;
+}
+
+.education-full-width::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(0, 168, 255, 0.03) 0%, transparent 30%),
+    radial-gradient(circle at 75% 75%, rgba(0, 216, 255, 0.03) 0%, transparent 30%);
+  z-index: 0;
+}
+
+.education-section {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.education-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.education-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d8ff, #00a1ff);
+  border-radius: 4px;
+}
+
+/* Timeline Styles (unchanged) */
+.timeline {
+  position: relative;
+  border-left: 3px solid #00a8ff;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+  display: flex;
+  align-items: stretch;
+}
+
+.timeline-item:hover .timeline-icon {
+  background-color: #00d8ff;
+  box-shadow: 0 0 0 5px rgba(0, 168, 255, 0.3);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -3rem;
+  top: 0.25rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #00a8ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.3);
+}
+
+.timeline-content {
+  background: rgba(31, 31, 31, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 168, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 168, 255, 0.15);
+  border-color: rgba(0, 168, 255, 0.3);
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: #00d8ff;
+  margin-bottom: 0.3rem;
+}
+
+.degree {
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details p {
+  color: #d1d1d1;
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.details span {
+  color: #00a8ff;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-full-width {
+    padding: 4rem 1.5rem;
+  }
+  
+  .education-section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-icon {
+    left: -1rem;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+    min-height: 160px;
+  }
+}
